@@ -1,6 +1,7 @@
 # prisoner's dilemma python thing
 
 you need python installed to run it of course
+
 to play with defaults:
 ```
 python main.py
