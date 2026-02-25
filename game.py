@@ -38,7 +38,7 @@ class Game:
         if self.verbose: print(string)
 
     def load_strategies(self):
-        fp = os.path.dirname(__file__)+"/strategies"
+        fp = os.path.join(os.path.dirname(__file__), "strategies")
 
         for strat_path in os.listdir(fp):
             if strat_path.endswith(".py"):
