@@ -15,5 +15,4 @@ class Strategy(Base):
         if moves:
             if not moves[0]:
                 return self.randomize()
-            return self.randomize(9, 1)
         return True
