@@ -62,6 +62,8 @@ if __name__ == "__main__":
 max points being {maximum}, with a noise chance of {NOISE}% \
 and {'no ' if not STRATEGIES_UNDERSTAND_NOISE else ''}knowledge about being misunderstood\n")
 
+    print("    " + "BAR".ljust(56) + "STRATEGY".ljust(16) + "PERCENT".ljust(11) + "POINTS".ljust(12) + "DESCRIPTION")
+
     for strat, result in results.items():
         if winner_amount < result:
             winner_amount = result
@@ -70,7 +72,7 @@ and {'no ' if not STRATEGIES_UNDERSTAND_NOISE else ''}knowledge about being misu
         description = game.descriptions[strat]
         percent = result/maximum*100
 
-        print(f"    [{bar(result, maximum)}]    {strat}: score of {round(percent, 2)} ({result}/{maximum} points) - {description}")
+        print(f"    [{bar(result, maximum)}]    " + strat.ljust(16) + f"{round(percent,2)}%".ljust(11) + str(result).ljust(12) + description)
 
 
     print(f"\nWINNER: {winner}")

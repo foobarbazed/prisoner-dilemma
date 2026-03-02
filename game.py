@@ -107,11 +107,13 @@ class Game:
         p1, p2 = p1(), p2()
         sum1 = sum(final_results[p1.name])
         sum2 = sum(final_results[p2.name])
-        self.print(f"{p1.name} + {p2.name} | {p1.name} - points gain: {sum1} (avg {round(sum1/self.turns, 2)}) | {p2.name} - points gain: {sum2} (avg {round(sum2/self.turns, 2)})")
+        self.print(p1.name.ljust(16) + str(sum1).ljust(8) + str(round(sum1/self.turns, 2)).ljust(24) + p2.name.ljust(16) + str(sum2).ljust(8) + str(round(sum2/self.turns, 2)).ljust(8))
         return final_results
 
 
     def play(self):
+
+        self.print("PLAYER A".ljust(16) + "POINTS".ljust(8) + "AVERAGE".ljust(24) + "PLAYER B".ljust(16) + "POINTS".ljust(8) + "AVERAGE")
 
         with multiprocessing.Pool(multiprocessing.cpu_count()) as pool:
             results = pool.imap(self.worker, self.pairs, chunksize=self.chunk_size)
