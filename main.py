@@ -59,7 +59,7 @@ if __name__ == "__main__":
 
     print("\n\nRESULTS")
     print(f"{GAMES} games of {TURNS} turns for every strat combination, \
-max points being {maximum}, with a noise chance of {NOISE}% {f'(1/{(round(100/NOISE))}) ' if NOISE > 0 else ''}\
+max points being {maximum}, with a noise chance of {NOISE}% \
 and {'no ' if not STRATEGIES_UNDERSTAND_NOISE else ''}knowledge about being misunderstood\n")
 
     for strat, result in results.items():
