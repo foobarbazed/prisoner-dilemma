@@ -6,7 +6,7 @@ class Strategy(Base):
 
     def __init__(self):
         self.name = "Smart"
-        self.description = "Generous Eye for an Eye, understands misunderstandings, forgives"
+        self.description = "Generous. Understands misunderstandings, forgives"
         self.consecutive_false = 0
         self.last_consecutive = 0
         self.probed = False
