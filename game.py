@@ -30,8 +30,8 @@ class Game:
         self.conditions = {
             (False, False): (1, 1),
             (True, True): (3, 3),
-            (True, False): (5, 0),
-            (False, True): (0, 5),
+            (True, False): (0, 5),
+            (False, True): (5, 0),
         }
 
     def print(self, string: str):
